@@ -9,10 +9,10 @@ phases:
     runtime-versions:
       nodejs: 10
     commands:
-    - echo 'Start installing NPM dependencies at `date`'
+    - echo Start installing NPM dependencies at `date`
     - npm install
     finally:
-    - echo 'Install dependencies finished at `date`'
+    - echo 'Install dependencies finished at `date`
   pre_build:
     commands:
     - command
@@ -22,19 +22,19 @@ phases:
     - command
   build:
     commands:
-    - echo 'Start Zipping Code at `date`'
+    - echo Start Zipping Code at `date
     - zip nodejs-tutorial.zip -r * .[^.]* -x .idea .gitignore eb-node-express-sample.iml
     finally:
-    - echo 'Zipping code finished at `date`'
+    - echo Zipping code finished at `date`
   post_build:
     commands:
-    - echo 'Start Sending zip to Elastic Beanstalk at `date`'
+    - echo Start Sending zip to Elastic Beanstalk at `date`
     - command
     finally:
-    - echo 'Zip sended to Elastic Beanstalk at `date`'
+    - echo Zip sended to Elastic Beanstalk at `date`
 artifacts:
   files:
   - nodejs-tutorial.zip
-  name: nodejs-tutorial-$(date)
+  name: nodejs-tutorial-$(date).zip
   discard-paths: yes
   base-directory: .
