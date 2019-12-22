@@ -22,7 +22,7 @@ phases:
     - command
   build:
     commands:
-    - echo Start Zipping Code at `date
+    - echo Start Zipping Code at `date`
     - zip nodejs-tutorial.zip -r * .[^.]* -x .idea .gitignore eb-node-express-sample.iml
     finally:
     - echo Zipping code finished at `date`
