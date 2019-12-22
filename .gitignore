@@ -2,3 +2,7 @@
 
 # Elastic Beanstalk CLI Files
 .elasticbeanstalk/*
+
+.idea
+
+eb-node-express-sample.iml
