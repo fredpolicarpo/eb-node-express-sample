@@ -34,7 +34,4 @@ phases:
     - echo Zip sended to Elastic Beanstalk at `date`
 artifacts:
   files:
-  - nodejs-tutorial.zip
-  name: nodejs-tutorial-$(date).zip
-  discard-paths: yes
-  base-directory: .
+  - '**/*'
